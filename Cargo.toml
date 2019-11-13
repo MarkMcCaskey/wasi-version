@@ -1,0 +1,19 @@
+[package]
+name = "wasi-version"
+version = "0.1.0"
+authors = ["Mark McCaskey <mark@wasmer.io>"]
+description = "CLI tool for identifying the WASI versions of a Wasm modules"
+repository = "https://github.com/MarkMcCaskey/wasi-version"
+license = "MIT"
+readme = "README.md"
+keywords = ["wasi", "cli", "version", "wasm", "webassembly"]
+categories = ["wasm", "development-tools", "command-line-utilities"]
+edition = "2018"
+
+[dependencies]
+wasm-interface = "0.1.0"
+structopt = "0.3"
+
+[profile.release]
+lto = true
+codegen-units = 1
